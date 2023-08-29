@@ -51,8 +51,6 @@ group by amount
 having COUNT(rental_id) > 250;
 
 -- Q10
--- Within the film table, how many rating categories are there? And what rating has the most
--- movies total?
 
 select COUNT(distinct rating)
 from film;
