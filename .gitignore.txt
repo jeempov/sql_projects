@@ -1,0 +1,4 @@
+creating_tables_example
+inserting_data
+joins_SQL_examples
+video_2_notes
