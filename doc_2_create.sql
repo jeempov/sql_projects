@@ -1,5 +1,5 @@
 -- customer table creation
-create table customer(
+create table customer_jim(
 	customer_id SERIAL primary key,
 	first_name VARCHAR(100),
 	last_name VARCHAR(100),
@@ -10,7 +10,7 @@ create table customer(
 -- movie table creation
 create table movie(
 	film_id SERIAL primary key,
-	runtime_minutes INTEGER(4),
+	runtime_minutes INTEGER,
 	mpaa_rating VARCHAR(5),
 	genre VARCHAR(30),
 	movie_name VARCHAR(50)
@@ -23,13 +23,12 @@ create table ticket_order(
 	total_tickets INTEGER, 
 	price NUMERIC(5,2),
 	customer_id INTEGER not NULL,
-	foreign KEY(customer_id) references customer(customer_id),
-	foreign KEY(order_details) references movie(film_id)
+	foreign KEY(customer_id) references customer_jim(customer_id)
 );
 
 -- ticket table creation
 create table ticket(
-	showtime DATETIME,
+	showtime TIME,
 	theater_id INTEGER,
 	order_id INTEGER not NULL,
 	film_id INTEGER not NULL,
@@ -43,7 +42,7 @@ create table concession_purchase(
 	price NUMERIC(5,2),
 	total_items INTEGER,
 	customer_id INTEGER,
-	foreign key(customer_id) references customer(customer_id)
+	foreign key(customer_id) references customer_jim(customer_id)
 );
 
 -- concession table creation

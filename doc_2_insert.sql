@@ -1,8 +1,8 @@
-insert into customer(
+insert into customer_jim(
 	first_name,
 	last_name,
 	email,
-	phone_number,
+	phone_number
 )VALUES(
 	'Jebidiah',
 	'Cornwallace',
@@ -25,7 +25,7 @@ insert into movie(
 insert into ticket_order(
 	total_tickets,
 	price,
-	customer_id,
+	customer_id
 )VALUES(
 	3,
 	51,
@@ -38,10 +38,10 @@ insert into ticket(
 	order_id,
 	film_id
 )VALUES(
-	'1987-02-11 15: 15: 00',
+	'15:15:00',
 	11,
 	1,
-	142
+	1
 );
 
 insert into concession_purchase(
@@ -56,9 +56,8 @@ insert into concession_purchase(
 
 insert into concession(
 	item_name,
-	purchase_id,
+	purchase_id
 )VALUES(
 	'small popcorn',
 	1
 );
-
